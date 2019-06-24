@@ -1,0 +1,15 @@
+<h1 class="text-center">Index</h1>
+<ul>
+  <% @posts.each do |post|%>
+    <div class="card mb-3">
+      <p class="card-header"><%= post.title %></p>
+      <p class="card-body"><%= post.body %></p>
+      <%= post.user.name if logged_in? %>
+    </div>
+  <%end%>
+</ul>
+
+  <%= link_to "Create a new Post", new_post_path if logged_in? %>
+  <%= link_to "Logout", logout_path if logged_in? %>
+
+  <%# <%= link_to "Login", login_path if not_logged_in? %> 

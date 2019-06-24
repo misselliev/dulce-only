@@ -1,7 +1,11 @@
-<h1>Login</h1>
+<h1 class="text-center">Login</h1>
 
 <%= form_for :user do |f|%>
-<%= f.text_field :email, placeholder: "Email"%>
-<%= f.text_field :password_digest, placeholder: "Password"%>
-<%= f.submit "Login"%>
+  <div class="form-group">
+    <%= f.text_field :email, placeholder: "Email", class:"form-control"%>
+    <%= f.password_field :password_digest, placeholder: "Password", class:"form-control"%>
+  </div>
+<%= f.submit "Login", class:"btn btn-primary d-flex mx-auto"%>
 <%end%>
+
+<%=link_to "Home", root_path, class:"text-danger" %>
