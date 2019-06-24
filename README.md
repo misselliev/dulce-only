@@ -6,7 +6,7 @@ Practicing authentication and authorization in Rails.
 
 # Currently working on
 
-Basic setup
+Authentication and posts
 
 # About
 
