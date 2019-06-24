@@ -4,8 +4,8 @@ class SessionsController < ApplicationController
   def new; end
 
   def create
-    @user = User.find_by(email: params[:email])
-    if @user&.authenticate(params[:password])
+    @user = User.find_by(email: params[:session][:email])
+    if @user&.authenticate(params[:session][:password])
       # login
       log_in user
       redirect_to root_path
